@@ -199,7 +199,7 @@ endfunction
 
 let g:PasteImageFunction = 'g:MarkdownPasteImage'
 
-function! mdip#MarkdownClipboardImage()
+function! s:MarkdownClipboardImage(default_name)
     " detect os: https://vi.stackexchange.com/questions/2572/detect-os-in-vimscript
     let s:os = "Windows"
     if !(has("win64") || has("win32") || has("win16"))
@@ -210,7 +210,11 @@ function! mdip#MarkdownClipboardImage()
     while  1
         let workdir = s:SafeMakeDir()
         " change temp-file-name and image-name
-        let g:mdip_tmpname = s:InputName()
+        if a:default_name == 0
+            let g:mdip_tmpname = s:InputName()
+        else
+            let g:mdip_tmpname = ""
+        endif
         if empty(g:mdip_tmpname)
           let g:mdip_tmpname = g:mdip_imgname . '_' . s:RandomName()
         endif
@@ -233,6 +237,14 @@ function! mdip#MarkdownClipboardImage()
             return
         endif
     endif
+endfunction
+
+function! mdip#MarkdownClipboardImageDefault()
+    s:MarkdownClipboardImage(1)
+endfunction
+
+function! mdip#MarkdownClipboardImageNamed()
+    s:MarkdownClipboardImage(0)
 endfunction
 
 if !exists('g:mdip_imgdir') && !exists('g:mdip_imgdir_absolute')
