@@ -165,7 +165,7 @@ function! s:RandomName()
         " creates a file like this: `2019-11-12-10-27-10.png`
         " the filesystem on Windows does not allow : character.
     else
-        let l:new_random = strftime("%Y-%m-%d-%H-%M-%S")
+        let l:new_random = strftime("%y%m%d%H%M%S")
     endif
     return l:new_random
 endfunction
