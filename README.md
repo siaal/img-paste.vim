@@ -10,7 +10,7 @@ By default, the location of the saved file (`img/image1.png`) and the in-text re
 
 Using Plug
 ```
-Plugin 'siaal/img-paste.vim'
+Plug 'siaal/img-paste.vim'
 ```
 
 ## Usage
@@ -61,7 +61,7 @@ This plugin gets clipboard content by running the `xclip` command.
 install `xclip` first.
 
 ## Acknowledgements
-I didn't write this plugin - Thanks to `vim-paste-devs` for the plugin, which I have extended to have a default setting
+I didn't write this plugin - Thanks to `vim-paste-devs` for the plugin, which I have extended merely to have a default setting
 
 > I'm not yet perfect at writing vim plugins but I managed to do it. Thanks to [Karl Yngve Lervåg](https://vi.stackexchange.com/users/21/karl-yngve-lerv%C3%A5g) and [Rich](https://vi.stackexchange.com/users/343/rich) for help on [vi.stackexchange.com](https://vi.stackexchange.com/questions/14114/paste-link-to-image-in-clipboard-when-editing-markdown) where they proposed a solution for my use case.
 
