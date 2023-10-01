@@ -239,11 +239,11 @@ function! s:MarkdownClipboardImage(default_name)
     endif
 endfunction
 
-function! mdip#MarkdownClipboardImageDefault()
+function! mdip#MarkdownClipboardImageUnnamed()
     s:MarkdownClipboardImage(1)
 endfunction
 
-function! mdip#MarkdownClipboardImageNamed()
+function! mdip#MarkdownClipboardImage()
     s:MarkdownClipboardImage(0)
 endfunction
 

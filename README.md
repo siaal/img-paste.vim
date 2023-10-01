@@ -16,8 +16,8 @@ Plugin 'siaal/img-paste.vim'
 ## Usage
 Add to .vimrc
 ```
-autocmd FileType markdown nmap <buffer><silent> <localleader>p :call mdip#MarkdownClipboardImageNamed()<CR>
-autocmd FileType markdown nmap <buffer><silent> <localleader>P :call mdip#MarkdownClipboardImageDefault()<CR>
+autocmd FileType markdown nmap <buffer><silent> <localleader>p :call mdip#MarkdownClipboardImage()<CR>
+autocmd FileType markdown nmap <buffer><silent> <localleader>P :call mdip#MarkdownClipboardImageUnnamed()<CR>
 " there are some defaults for image directory and image name, you can change them
 " let g:mdip_imgdir = 'img'
 " let g:mdip_imgname = 'image'
