@@ -199,7 +199,7 @@ endfunction
 
 let g:PasteImageFunction = 'g:MarkdownPasteImage'
 
-function! s:MarkdownClipboardImage(default_name)
+function! s:PasteImageMarkdown(default_name)
     " detect os: https://vi.stackexchange.com/questions/2572/detect-os-in-vimscript
     let s:os = "Windows"
     if !(has("win64") || has("win32") || has("win16"))
@@ -240,11 +240,11 @@ function! s:MarkdownClipboardImage(default_name)
 endfunction
 
 function! mdip#MarkdownClipboardImageUnnamed()
-    s:MarkdownClipboardImage(1)
+    call s:PasteImageMarkdown(1)
 endfunction
 
 function! mdip#MarkdownClipboardImage()
-    s:MarkdownClipboardImage(0)
+    call s:PasteImageMarkdown(0)
 endfunction
 
 if !exists('g:mdip_imgdir') && !exists('g:mdip_imgdir_absolute')
