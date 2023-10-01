@@ -240,11 +240,11 @@ function! s:MarkdownClipboardImage(default_name)
 endfunction
 
 function! mdip#MarkdownClipboardImageDefault()
-    s:MarkdownClipboardImage(1)
+    call s:MarkdownClipboardImage(1)
 endfunction
 
 function! mdip#MarkdownClipboardImageNamed()
-    s:MarkdownClipboardImage(0)
+    call s:MarkdownClipboardImage(0)
 endfunction
 
 if !exists('g:mdip_imgdir') && !exists('g:mdip_imgdir_absolute')
